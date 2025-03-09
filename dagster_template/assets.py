@@ -32,7 +32,7 @@ def starwars_planets() -> None:
     return write_starwars_api_data_to_disk(data, "planets")
 
 
-@dg.asset(deps=[starwars_api_asset], description="The planets in the Star Wars API")
+@dg.asset(deps=[starwars_api_asset], description="The films in the Star Wars API")
 def starwars_films() -> None:
     data = get_starwars_api_data("films")
     return write_starwars_api_data_to_disk(data, "films")
